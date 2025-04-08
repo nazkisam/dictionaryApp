@@ -1,10 +1,11 @@
 :root{
 
-  --header-color:black;
+  --header-color:rgb(165, 127, 127);
   --bcg-color:#f5f5f5;
   --padding:20px;
-  --text-color:
-
+  --text-color:black;
+  --border-radius:10px;
+  --border-style:dotted;
 
 }
 *{
@@ -17,9 +18,40 @@
 body{
   font-family: Arial, sans-serif;
   background-color :var(--bcg-color);
-
+  width: 100vw;
 }
 header{
   background-color :var(--header-color);
   padding: var(--padding);
+  color:var(--text-color);
+  display:flex;
+  justify-content:center
+  
 }
+h1{
+  font: size 36px;
+}
+
+main{
+  height:80vh;
+  padding:var(--padding);
+  max-width: 800px;
+  margin: 0 auto;
+}
+main form{
+  display:flex;
+  justify-content:center
+}
+
+form input[type = "text"], button[type = "submit"]{
+  border:none;
+  font-size: 16px; 
+  font-weight: 500px;
+  border-radius:var(--border-radius);
+ /* border-style:var(--border-style);*/
+}
+form input[type = "text"]
+{
+flex-grow: 1;
+}
+
