@@ -8,6 +8,14 @@ form.addEventListener("submit", (e)=>{
 });
 
 const getWordInfo = async(word)=>{
+
+try{
+
+
+
+
+
+
 const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
 const data = await response.json();
 console.log(data); 
@@ -28,7 +36,7 @@ definitions.example}</p>
 
 
 `;
-
+//fetching antonyms
 if(definitions.antonyms.length === 0 ){
  resultDiv.innerHTML+= `<span>Not Found</span>`
 }
@@ -39,12 +47,17 @@ for(let i = 0 ; i<definitions.antonyms.length; i++){
 }}
 
 
-for(let i = 0; i<definitions.synonyms.length; i++){
-  
-  resultDiv.innerHTML += `<li> ${definitions.synonyms[i]}</li>`
+
+//Adding read more button
+resultDiv.innerHTML += `<a href = "${data[0].sourceUrls}" target  = "_blank"> Read More</a>`
+
 }
 
+catch(error){
 
+  resultDiv.innerHTML = `<p>Sorry, the word could not be found</p>`
+
+}
  
 
 
