@@ -24,7 +24,7 @@ let definitions = data[0].meanings[0].definitions[0]
 resultDiv.innerHTML = `
 
 <h2> <strong>Word: </strong>${data[0].word}</h2>
-<p>${data[0].meanings[0].partOfSpeech[0]}</p>
+<p class = "partOfSpeech">${data[0].meanings[0].partOfSpeech[0]}</p>
 
 <p><strong>Meaning: </strong>${definitions.definition === undefined ? "Not Found" : definitions.definition}</p> 
 
@@ -49,7 +49,7 @@ for(let i = 0 ; i<definitions.antonyms.length; i++){
 
 
 //Adding read more button
-resultDiv.innerHTML += `<a href = "${data[0].sourceUrls}" target  = "_blank"> Read More</a>`
+resultDiv.innerHTML += `<div><a href = "${data[0].sourceUrls}" target  = "_blank"> Read More</a></div>`
 
 }
 
