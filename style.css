@@ -1,9 +1,9 @@
 :root{
 
-  --header-color:rgb(165, 127, 127);
+  --primary-color: #008080;
   --bcg-color:#f5f5f5;
   --padding:20px;
-  --text-color:black;
+  --text-color:rgb(245, 229, 229);
   --border-radius:10px;
   --border-style:dotted;
 
@@ -21,7 +21,7 @@ body{
   width: 100vw;
 }
 header{
-  background-color :var(--header-color);
+  background-color :var(--primary-color);
   padding: var(--padding);
   color:var(--text-color);
   display:flex;
@@ -48,10 +48,28 @@ form input[type = "text"], button[type = "submit"]{
   font-size: 16px; 
   font-weight: 500px;
   border-radius:var(--border-radius);
+  padding: calc(var(--padding)/2);
  /* border-style:var(--border-style);*/
 }
 form input[type = "text"]
 {
 flex-grow: 1;
+}
+
+form button[type = "submit"]{
+  background-color:var(--primary-color);
+  color: var(--text-color);
+  margin-left: 10px;
+  cursor:pointer;
+}
+
+footer{
+  background-color:var(--primary-color); 
+  color:var(--text-color);
+  padding:var(--padding);
+  text-align:center;
+  font-size: 18px;
+  position:fixed;
+  width: 100%;
 }
 
